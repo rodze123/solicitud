@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una hermosa página para celebrar el aniversario de Rodmi y Esthefany, llena de amor y sorpresas">
+    <meta name="keywords" content="aniversario, amor, sorpresa, Rodmi, Esthefany, 28 de septiembre">
+    <meta name="author" content="Rodmi">
+    <title>Feliz Aniversario Rodmi & Esthefany</title>
+    <style>
+        /* Fuente y fondo animado */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 4rem;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn 2s forwards;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        /* Galería de imágenes */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 45%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 20px;
+            transition: transform 0.5s, box-shadow 0.5s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Botón animado */
+        button {
+            margin-top: 30px;
+            background-color: #ff69b4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            transition: transform 0.5s;
+            outline: none;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Mensaje sorpresa */
+        #surpriseMessage {
+            margin-top: 30px;
+            font-size: 2rem;
+            color: #ffd700;
+            display: none;
+            animation: slideIn 2s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .gallery img {
+                width: 80%;
+            }
+
+            button {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Aniversario, Rodmi y Esthefany</h1>
+        <p>Hoy, 28 de septiembre, celebramos nuestro amor. Esthefany, eres la persona más especial para mí, y este día quiero hacerlo aún más bonito con esta pequeña sorpresa.</p>
+
+        <!-- Galería de imágenes -->
+        <div class="gallery">
+            <img src="C:\Users\User\pricnes\ella y yo #28\IMG20240603141930.jpg" alt="Un momento especial">
+            <img src="C:\Users\User\pricnes\ella y yo #28\IMG20240603141913.jpg" alt="Otro momento feliz">
+        </div>
+
+        <!-- Botón interactivo -->
+        <button id="revealMessage">¡Toca aquí para ver una sorpresa!</button>
+
+        <!-- Mensaje sorpresa -->
+        <p id="surpriseMessage">Rodmi y Esthefany, juntos por siempre. ¡Te amo con todo mi corazón! ❤️</p>
+
+        <!-- Footer -->
+        <footer>
+            <p>Creado con amor por Rodmi para Esthefany - Septiembre 28</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mostrar el mensaje sorpresa al hacer clic
+        document.getElementById("revealMessage").addEventListener("click", function() {
+            document.getElementById("surpriseMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>
